@@ -1,0 +1,12 @@
+applications:
+- name: demo-command-side
+  path: target/command-side-0.0.1-SNAPSHOT.jar
+  memory: 1G
+  timeout: 120
+  services:
+   - worker-mq
+   - cloud-config-server
+   - cloud-service-registry
+   - dbService
+  env:
+     JBP_CONFIG_DEBUG: '{enabled: true}'
